@@ -4,17 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace 字符串类型初始化
+namespace _07随机数
 {
     class Program
     {
         static void Main(string[] args)
+
+            
         {
-            char[] n = { '你','是','谁' };//利用字符数组对字符串进行初始化
-            //string str = new string(n);
-            string str = new string(n, 1, 2);//提取字符数组中的一部分进行初始化
-            Console.WriteLine(str);
-            Console.ReadKey();
+            Random r = new Random();//创建能够产生随机数的对象
+            while (true)
+            {
+                int rNumber = r.Next(1, 11);//让产生随机数的这个对象调用方法产生随机数  产生1-10之间的随机数 左闭右开
+                Console.WriteLine(rNumber);
+                Console.ReadKey();
+            }
+            
+            
         }
     }
 }
